@@ -1,0 +1,37 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="author" content="hamano">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="hugo-kind" content="{{ .Kind }}">
+  <meta name="hugo-type" content="{{ .Type }}">
+  <meta name="hugo-section" content="{{ .Section }}">
+  {{/* set title */ -}}
+  {{ $SectionTitle := .Site.Title -}}
+  {{ if ne .Section "" -}}
+  {{ $SectionTitle = (printf "cuspy %s" .Section) -}}
+  {{ end -}}
+  {{ if (and .IsPage (ne .Title "")) -}}
+  {{ $.Scratch.Set "title" (printf "%s - %s" .Title $SectionTitle) -}}
+  {{ else -}}
+  {{ $.Scratch.Set "title" $SectionTitle -}}
+  {{ end -}}
+  <title>{{ $.Scratch.Get "title" }}</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  {{ if eq .Section "diary" -}}
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="cuspy diary"/>
+  <meta property="og:title" content="{{ $.Scratch.Get "title" }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta name="og:description" content="{{ .Summary }}">
+  {{ if isset .Params "image" -}}
+  <meta property="og:image" content="{{ .Permalink }}{{ .Params.image }}" />
+  {{ end -}}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hamano" />
+  {{ end -}}
+  <!-- CSS -->
+  {{ $style := resources.Get "css/main.scss" | resources.ToCSS -}}
+  <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ partial "icons.svg" . }}
+</head>

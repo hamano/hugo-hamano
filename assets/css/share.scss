@@ -1,0 +1,54 @@
+/* share button */
+.share-area {
+  margin: 1em 2em;
+}
+.share-button a {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  padding: 4px 0;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: $light-base00;
+  text-decoration: none;
+  vertical-align: bottom;
+  transition: all 0.4s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.theme-dark .share-button a {
+  color: $dark-base00;
+}
+
+.share-button a:hover {
+  opacity: 0.6;
+  transition: all 0.4s;
+}
+.share-button svg {
+  height: 1.6em;
+  width: 1.6em;
+  fill: currentColor;
+}
+.share-area .small-text {
+  font-size: 11px;
+}
+.share-button .hatena-bookmark-button {
+  background: #00A4DE;
+}
+.share-button .facebook-button {
+  background: #405BA7;
+}
+.share-button .twitter-button {
+  background: #55ACEE;
+}
+.share-button .linkedin-button {
+  background: #2867B2;
+}
+.share-button .pocket-button {
+  background: #EE4256;
+}
+.share-button .reddit-button {
+  background: #FF5700;
+}

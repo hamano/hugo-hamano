@@ -1,0 +1,33 @@
+<footer class="navbar">
+  <div class="container">
+    <a class="navbar-title" href="/">
+      {{ .Site.Title }}
+    </a>
+    <a class="navbar-item" href="https://twitter.com/hamano">
+      <svg class="icons"><use xlink:href="#fa-twitter"></use></svg>
+    </a>
+    <a class="navbar-item" href="https://github.com/hamano">
+      <svg class="icons"><use xlink:href="#fa-github-alt"></use></svg>
+    </a>
+    <a class="navbar-item" href="https://pypi.org/user/hamano">
+      <svg class="icons"><use xlink:href="#fa-python"></use></svg>
+    </a>
+  </div>
+</footer>
+
+{{ if .Site.Params.enableIP }}
+<script src="{{ $.Site.BaseURL }}/js/instant.page-3.0.0.js" type="module" defer></script>
+{{ end }}
+{{ if .Params.mathjax }}
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+{{ end }}
+{{ partial "ga.html" . }}
+</body>
+</html>

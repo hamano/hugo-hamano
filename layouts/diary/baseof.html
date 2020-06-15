@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a class="navbar-title" href="/diary/">
+          cuspy diary
+        </a>
+        <div class="navbar-right">
+          {{ partial "theme-switch.html" . }}
+          <a class="navbar-item" href="/diary/index.xml">
+            <svg class="icons fa-rss-square">
+              <use xlink:href="#fa-rss-square"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      {{ partial "github-corners.html" . }}
+    </header>
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+  </body>
+<html>

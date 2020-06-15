@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a class="navbar-title" href="/wiki/">
+          cuspy wiki
+        </a>
+      </div>
+    </div>
+    <main class="container">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </main>
+  </body>
+</html>

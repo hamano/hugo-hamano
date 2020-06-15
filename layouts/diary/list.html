@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="container">
+  <ul>
+    {{ range .Data.Pages }}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}{{ if .Draft }} #Draft{{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+{{ partial "share.html" . }}
+{{ end }}

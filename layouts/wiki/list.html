@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a class="navbar-title" href="/wiki/">
+          cuspy wiki
+        </a>
+      </div>
+    </div>
+    <main class="container">
+      <ul>
+        {{ range .Data.Pages }}
+        <li>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}{{ if .Draft }} #Draft{{ end }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!--div class="navbar-item">
+  <label class="switch">
+    <input type="checkbox" id="switch-style">
+    <span class="slider round"></span>
+  </label>
+</div-->
+<a class="navbar-item" onclick="toggle_theme();">
+  <svg id="theme-switch-icon-sun" class="icons fa-sun">
+    <use xlink:href="#fa-sun" />
+  </svg>
+  <svg id="theme-switch-icon-moon" class="icons fa-moon">
+    <use xlink:href="#fa-moon" />
+  </svg>
+</a>
+<input id="theme-switch-checkbox" type="checkbox" style="display: none;" />
+<script>
+  const checkbox = document.querySelector("#theme-switch-checkbox");
+  function toggle_theme() {
+    switch_theme(!checkbox.checked);
+    return false;
+  }
+  function switch_theme(checked) {
+    checkbox.checked = checked
+    const icon_sun = document.querySelector("#theme-switch-icon-sun");
+    const icon_moon = document.querySelector("#theme-switch-icon-moon");
+    if (checked == true) {
+      icon_sun.style.removeProperty("display");
+      icon_moon.style.display = "none";
+      document.body.classList.remove("theme-light");
+      document.body.classList.add("theme-dark");
+    } else {
+      icon_sun.style.display = "none";
+      icon_moon.style.removeProperty("display");
+      document.body.classList.remove("theme-dark");
+      document.body.classList.add("theme-light");
+    }
+  }
+  checkbox.addEventListener("change", () => {
+    switch_theme(checkbox.checked);
+  });
+  const is_dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  switch_theme(is_dark);
+</script>

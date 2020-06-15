@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a class="navbar-title" href="/">
+          {{ .Site.Title }}
+        </a>
+        <div class="navbar-right">
+          {{ partial "theme-switch.html" . }}
+        </div>
+      </div>
+      {{ partial "github-corners.html" . }}
+    </header>
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer.html" . }}
+  </body>
+<html>

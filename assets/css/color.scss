@@ -1,0 +1,46 @@
+/*
+ * @useを使えればもっともっと簡潔に書ける
+ */
+@import "base16/base16-tomorrow";
+$light-base00: $base00;
+$light-base01: $base01;
+$light-base02: $base02;
+$light-base03: $base03;
+$light-base04: $base04;
+$light-base05: $base05;
+$light-base06: $base06;
+$light-base07: $base07;
+$light-base08: $base08;
+$light-base09: $base09;
+$light-base0A: $base0A;
+$light-base0B: $base0B;
+$light-base0C: $base0C;
+$light-base0D: $base0D;
+$light-base0E: $base0E;
+$light-base0F: $base0F;
+
+@import "base16/base16-eighties";
+$dark-base00: $base00;
+$dark-base01: $base01;
+$dark-base02: $base02;
+$dark-base03: $base03;
+$dark-base04: $base04;
+$dark-base05: $base05;
+$dark-base06: $base06;
+$dark-base07: $base07;
+$dark-base08: $base08;
+$dark-base09: $base09;
+$dark-base0A: $base0A;
+$dark-base0B: $base0B;
+$dark-base0C: $base0C;
+$dark-base0D: $base0D;
+$dark-base0E: $base0E;
+$dark-base0F: $base0F;
+
+// for milligram
+//$color-initial: #fff;
+//$color-primary: $light-base05;
+//$color-secondary: $light-base00;
+//$color-tertiary: #f4f5f6
+//$color-quaternary: #d1d1d1
+//$color-quinary: #e1e1e1

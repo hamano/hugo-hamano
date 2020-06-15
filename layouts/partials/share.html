@@ -1,0 +1,39 @@
+{{/* set permalink */ -}}
+{{ $Permalink := .Permalink -}}
+{{ if isset .Params "permalink" -}}
+{{ $Permalink = .Params.permalink -}}
+{{ end -}}
+
+<div class="share-area">
+  <div class="share-button">
+    <!-- hatena bookmark -->
+    <a href="https://b.hatena.ne.jp/entry/{{$Permalink}}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{{$.Scratch.Get "title"}}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加">
+      <svg><use xlink:href="#i-hatena"></use></svg><br/>
+      <span class="small-text">はてぶ</span>
+    </a>
+    <!-- facebook -->
+    <a href="https://www.facebook.com/sharer.php?u={{$Permalink}}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="facebook-button">
+      <svg><use xlink:href="#fa-facebook"></use></svg><br/>
+      <span class="small-text">Facebook</span></a>
+    <!-- twitter -->
+    <a href="https://twitter.com/intent/tweet?text={{$.Scratch.Get "title"}} {{$Permalink}}" target="_blank" class="twitter-button">
+      <svg><use xlink:href="#fa-twitter"></use></svg><br/>
+      <span class="small-text">Twitter</span>
+    </a>
+    <!-- linkedin -->
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{$Permalink}}" class="linkedin-button" target="_blank">
+      <svg><use xlink:href="#fa-linkedin"></use></svg><br/>
+      <span class="small-text">Linkedin</span>
+    </a>
+    <!-- pocket -->
+    <a href="https://getpocket.com/edit?url={{$Permalink}}" class="pocket-button" target="_blank">
+      <svg><use xlink:href="#fa-get-pocket"></use></svg><br/>
+      <span class="small-text">Pocket</span>
+    </a>
+    <!-- reddit -->
+    <a href="https://www.reddit.com/submit?url={{$Permalink}}&title={{.Title}}" class="reddit-button" target="_blank">
+      <svg><use xlink:href="#fa-reddit-alien"></use></svg><br/>
+      <span class="small-text">Reddit</span>
+    </a>
+  </div>
+</div>
