@@ -3,14 +3,14 @@
 
 name = "hamano"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://github.com/hamano/hugo-hamano/blob/master/LICENSE.md"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = "https://www.cuspy.org/"
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.15
 
 [author]
   name = "HAMANO Tsukasa"
-  homepage = ""
+  homepage = "https://www.cuspy.org/"
 
