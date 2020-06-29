@@ -215,6 +215,16 @@ pre {
   border-left: .3rem solid $light-base06;
 }
 
+ol {
+  list-style: decimal;
+  margin-left: 1em;
+}
+
+ul {
+  list-style: circle;
+  margin-left: 1em;
+}
+
 // for hugo toc
 
 #TableOfContents {
