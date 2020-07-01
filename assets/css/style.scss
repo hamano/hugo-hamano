@@ -195,6 +195,7 @@ body.theme-dark strong {
 @media (max-width: 40rem) {
   .row .column[class*=" column-"] {
     max-width: 100%;
+    margin: 0;
   }
 }
 
