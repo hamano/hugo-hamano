@@ -5,7 +5,7 @@
     <header class="navbar">
       <div class="container">
         <a class="navbar-title" href="/diary/">
-          cuspy diary
+          {{ with .Site.GetPage "/diary/" }}{{ .Title }}{{ end }}
         </a>
         <div class="navbar-right">
           {{ partial "theme-switch.html" . }}
