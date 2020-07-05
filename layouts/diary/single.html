@@ -25,12 +25,10 @@
         </a>
       </div>
       <h3>Recent Entry</h3>
-      {{ range $.Site.RegularPages }}
-      {{ if eq .Section "diary" }}
+      {{ range first 10 .Parent.RegularPages }}
       <h4>
         <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a>
       </h4>
-      {{ end }}
       {{ end }}
     </div>
   </div>
