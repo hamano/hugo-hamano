@@ -1,0 +1,9 @@
+<h3 class="toc">
+  <svg class="icons"><use xlink:href="#i-list"></use></svg>&nbsp;
+  {{ if eq $.Page.Params.lang "en" -}}
+  Table Of Contents
+  {{ else -}}
+  目次
+  {{ end -}}
+</h3>
+{{.Page.TableOfContents}}
