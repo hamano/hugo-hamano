@@ -1,0 +1,106 @@
+.hatena-bookmark-widget {
+  font-size: small;
+  width: 20rem;
+  text-align: center;
+  margin-bottom: 1em;
+  border-color: $light-base06;
+  font-size: small;
+  line-height: 1.2;
+}
+.hatena-bookmark-widget * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.hatena-bookmark-widget div.hatena-bookmark-widget-title {
+  font-weight: bold;
+  text-align: left;
+  border-radius: 1em 1em 0 0;
+  padding: 6px 6px;
+  background-color: $light-base01;
+  border: 1.5px solid;
+  border-bottom: none;
+}
+body.theme-dark .hatena-bookmark-widget div.hatena-bookmark-widget-title {
+  background-color: $dark-base01;
+}
+.hatena-bookmark-widget div.hatena-bookmark-widget-title a {
+  display: block;
+  padding-left: 18px;
+  background: url('data:image/gif;base64,R0lGODlhDgAOAJEAACpfyYWl+v///1J55yH5BAAAAAAALAAAAAAOAA4AAAIsjI83Me3fAINUOoHxs00PP3Cf0JHRNGZmiIKe6Jrw+rbqKlJOrochAAwKgQUAOw==') left no-repeat;
+}
+.hatena-bookmark-widget ul {
+  list-style-type: none;
+  border: 1.5px solid;
+  border-bottom: none;
+  border-top: none;
+}
+
+.hatena-bookmark-widget ul li {
+  padding:0 5px;
+  margin: 0 !important;
+  border-top: 1.5px solid;
+  text-align: right;
+  height: 4.5em;
+  position: relative;
+  background: none;
+  word-wrap: break-word;
+}
+.hatena-bookmark-widget ul li * {
+  vertical-align: bottom;
+}
+.hatena-bookmark-widget ul li img {
+  margin-left: .5em;
+}
+.hatena-bookmark-widget ul li a.hatena-bookmark-entrytitle {
+  display:block;
+  text-align: left;
+  padding: 5px 0;
+  height: 2em;
+}
+
+.hatena-bookmark-widget ul li span.hatena-bookmark-nocount {
+  display: block;
+  padding-top:1em;
+  text-align: center;
+  color: #999;
+}
+
+.hatena-bookmark-widget div.hatena-bookmark-widget-footer {
+  border: 1.5px solid;
+  border-top: none;
+  padding-left: 5px;
+  vertical-align: middle;
+  border-radius: 0 0 0.5em 0.5em;
+  height: 0.5em;
+}
+.hatena-bookmark-widget div.hatena-bookmark-widget-footer a {
+  display: block;
+  padding: 7px 0;
+  margin-right: -5px;
+  overflow: hidden;
+}
+.hatena-bookmark-widget div.hatena-bookmark-widget-footer {
+  display: block;
+  font-weight: bold;
+}
+
+.hatena-bookmark-widget span.hatena-bookmark-count {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+}
+.hatena-bookmark-widget span.hatena-bookmark-count em a {
+  background-color: #fff0f0;
+  font-weight: bold;
+  display: inline;
+  font-style: normal;
+  color: #ff6666;
+}
+.hatena-bookmark-widget span.hatena-bookmark-count  strong a {
+  background-color: #ffcccc;
+  font-weight: bold;
+  font-style: normal;
+  display: inline;
+  color: red;
+}
