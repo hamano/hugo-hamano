@@ -1,5 +1,5 @@
 body {
-  font-family: "Sans";
+  font-family: sans-serif;
   font-size: medium;
   transition: all 0.5s;
   background-color: $light-base00;
@@ -153,6 +153,7 @@ header.navbar .navbar-item > svg {
   font-size: x-large;
   color: $light-base05;
   display: inline-block;
+  vertical-align: middle;
 }
 body.theme-dark .navbar-item {
   color: $dark-base05;
@@ -199,6 +200,7 @@ body.theme-dark strong {
 @media (max-width: 40rem) {
   .row .column[class*=" column-"] {
     max-width: 100%;
+     margin: 0;
   }
 }
 
@@ -248,11 +250,45 @@ body.theme-dark #TableOfContents {
   line-height: 1;
 }
 
-
 figure {
   text-align: center;
 }
 
 figure h4 {
   font-weight: normal;
+}
+
+.theme-switch {
+  width: 2em;
+}
+.theme-switch input[type="checkbox"] {
+  display: none;
+}
+
+.theme-switch label {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid $light-base05;
+  border-radius: 3px;
+  height: 24px;
+}
+
+body.theme-dark .theme-switch label {
+  border: 2px solid $dark-base05;
+}
+
+.theme-switch #theme-switch-box {
+  height: 20px;
+  width: 50%;
+  background: $light-base05;
+  transition: .2s;
+}
+body.theme-dark .theme-switch #theme-switch-box {
+  background: $dark-base05;
+}
+
+.theme-switch #theme-switch-checkbox:checked + label #theme-switch-box {
+  transform: translateX(100%);
+  background: $dark-base05;
+  margin: 0;
 }
