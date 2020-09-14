@@ -49,11 +49,7 @@ h4 {
   font-weight: bold;
 }
 
-main p {
-  margin-bottom: 1.2em;
-}
-
-main img {
+.content img {
   margin: 1em;
   padding: 0;
   max-width: 90%;
@@ -63,7 +59,7 @@ main img {
   border: 1px solid $light-base04;
 }
 
-body.theme-dark main img {
+body.theme-dark .content img {
   border: 1px solid $dark-base04;
 }
 
@@ -229,6 +225,18 @@ ol {
 ul {
   list-style: circle;
   margin-left: 1em;
+}
+
+.meta span.date {
+  margin-right: 1em;
+}
+
+.meta span.tag {
+  border: 0.2rem solid $light-base06;
+}
+
+body.theme-dark .meta span.tag {
+  border: 0.2rem solid $dark-base06;
 }
 
 // for hugo toc
