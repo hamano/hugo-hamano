@@ -22,33 +22,19 @@ if (typeof Hatena.BookmarkWidget == 'undefined') {
         };
 
         var themetable = {
-            hatenadiary: {
-                wrapper:'hatena-module',
-                title:  'hatena-moduletitle',
-                body:   'hatena-modulebody',
-                footer: 'hatena-modulefooter',
-                cssfile:'https://b.hatena.ne.jp/css/widget-hatenadiary.css'
-            },
-            notheme: {
-                wrapper:'hatena-bookmark-widget-notheme',
-                title:  'hatena-bookmark-widget-title',
-                body:   'hatena-bookmark-widget-body',
-                footer: 'hatena-bookmark-widget-footer',
-                cssfile:''
-            },
             other:  {
                 wrapper:'hatena-bookmark-widget',
                 title:  'hatena-bookmark-widget-title',
                 body:   'hatena-bookmark-widget-body',
                 footer: 'hatena-bookmark-widget-footer',
-                cssfile:'/~hamano/hatena/widget.css'
+                cssfile:''
             },
             base: 'hatena-bookmark'
         }
 
         var createDiv = function (callbackId, num, div) {
             var c = Hatena.BookmarkWidget;
-            var theme = (themetable[c.theme] || themetable['other']);
+            var theme = themetable['other'];
             var li = [];
             li.push('<li>Loading...</li>');
             for(var i=1; i<num; i++) {
@@ -77,6 +63,9 @@ if (typeof Hatena.BookmarkWidget == 'undefined') {
                 div.style.width = width > 0 ? width + 'px' : null;
             } else {
                 let elm = document.getElementById('hatena-widget');
+                if (elm == null) {
+                    return;
+                }
                 elm.insertAdjacentHTML(
                     'beforeend',
                     [
@@ -124,13 +113,6 @@ if (typeof Hatena.BookmarkWidget == 'undefined') {
                 var script = $E('script', { defer: 'defer', type: 'text/javascript', charset: 'utf-8', src: request });
                 document.getElementsByTagName('head')[0].appendChild(script)
             }
-        };
-        var loadCSS = function() {
-            var theme = (themetable[Hatena.BookmarkWidget.theme] || themetable['other']);
-            if(!theme.cssfile) return;
-            var link = $E('link', { rel: 'stylesheet', type: 'text/css', href: theme.cssfile });
-            theme.cssfile = null;
-            document.getElementsByTagName('head')[0].appendChild(link);
         };
         var loadJSONP = function(func) {
             if (window.addEventListener && document.addEventListener) {
@@ -185,7 +167,7 @@ if (typeof Hatena.BookmarkWidget == 'undefined') {
         };
     };
 } else {
-    for(i in ['url','title', 'sort', 'width', 'num', 'theme']) {
+    for(i in ['url','title', 'sort', 'width', 'num']) {
         Hatena.BookmarkWidget[i] = null;
     }
 }
@@ -195,7 +177,6 @@ Hatena.BookmarkWidget.title = "AAA Blog";
 Hatena.BookmarkWidget.sort  = "count";
 Hatena.BookmarkWidget.width = 0;
 Hatena.BookmarkWidget.num   = 10;
-Hatena.BookmarkWidget.theme = "default";
 Hatena.BookmarkWidget.load();
 
 Hatena.BookmarkWidget.url   = "https://www.cuspy.org/diary/";
@@ -203,6 +184,5 @@ Hatena.BookmarkWidget.title = "Cooking Blog";
 Hatena.BookmarkWidget.sort  = "count";
 Hatena.BookmarkWidget.width = 0;
 Hatena.BookmarkWidget.num   = 10;
-Hatena.BookmarkWidget.theme = "default";
 Hatena.BookmarkWidget.load();
 </script>
