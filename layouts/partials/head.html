@@ -1,12 +1,12 @@
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="author" content="hamano">
-  <meta name="description" content="{{ .Site.Params.description }}">
-  <meta name="hugo-kind" content="{{ .Kind }}">
-  <meta name="hugo-type" content="{{ .Type }}">
-  <meta name="hugo-section" content="{{ .Section }}">
-  <meta name="canonical" content="{{ .Permalink }}">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+  <meta name="author" content="hamano" />
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta name="hugo-kind" content="{{ .Kind }}" />
+  <meta name="hugo-type" content="{{ .Type }}" />
+  <meta name="hugo-section" content="{{ .Section }}" />
+  <meta name="canonical" content="{{ .Permalink }}" />
   {{/* set title */ -}}
   {{ if .IsNode -}}
   <title>{{ .Title }}</title>
@@ -30,5 +30,6 @@
   <!-- CSS -->
   {{ $style := resources.Get "css/main.scss" | resources.ToCSS -}}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
+  {{ partial "gtag.html" . }}
   {{ partial "icons.svg" . }}
 </head>
