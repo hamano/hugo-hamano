@@ -1,0 +1,6 @@
+<h3>Recent Entries</h3>
+{{ range first 10 .Parent.RegularPages }}
+<h4>
+  <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} #Draft{{ end }}</a>
+</h4>
+{{ end }}
