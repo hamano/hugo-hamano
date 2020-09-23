@@ -14,6 +14,7 @@ body.theme-dark {
 h1,h2,h3,h4,h5,h6 {
   color: $light-base06;
   border-color: $light-base06;
+  margin-top: 1.5em;
 }
 
 body.theme-dark h1,
@@ -47,6 +48,10 @@ h3 {
 h4 {
   font-size: medium;
   font-weight: bold;
+}
+
+.content {
+  margin-top: 2em;
 }
 
 .content img {
@@ -227,8 +232,12 @@ ul {
   margin-left: 1em;
 }
 
+.meta {
+  margin-top: 2em;
+}
+
 .meta span.date {
-  margin-right: 1em;
+  margin-right: 2em;
 }
 
 .meta span.tag {
@@ -264,6 +273,10 @@ figure {
 
 figure h4 {
   font-weight: normal;
+}
+
+footer {
+  margin-top: 2em;
 }
 
 .theme-switch {
