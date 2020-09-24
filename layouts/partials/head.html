@@ -28,7 +28,7 @@
   {{ end -}}
   {{ end -}}
   <!-- CSS -->
-  {{ $style := resources.Get "css/main.scss" | resources.ToCSS -}}
+  {{ $style := resources.Get "css/style.scss" | resources.ToCSS -}}
   <link href="{{ $style.RelPermalink }}" rel="stylesheet">
   {{ partial "gtag.html" . }}
   {{ partial "icons.svg" . }}
