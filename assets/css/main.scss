@@ -299,6 +299,7 @@ body.theme-dark .theme-switch label {
 }
 
 .theme-switch #theme-switch-box {
+  margin: 0;
   height: 20px;
   width: 50%;
   background: $light-base05;
@@ -310,6 +311,4 @@ body.theme-dark .theme-switch #theme-switch-box {
 
 .theme-switch #theme-switch-checkbox:checked + label #theme-switch-box {
   transform: translateX(100%);
-  background: $dark-base05;
-  margin: 0;
 }

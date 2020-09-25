@@ -1,6 +1,6 @@
 <div class="navbar-item">
-  <svg id="theme-switch-icon-sun" class="icons fa-sun">
-    <use xlink:href="#fa-sun" />
+  <svg id="theme-switch-icon-moon" class="icons fa-moon">
+    <use xlink:href="#fa-moon" />
   </svg>
 </div>
 <div class="navbar-item theme-switch">
@@ -10,8 +10,8 @@
   </label>
 </div>
 <div class="navbar-item">
-  <svg id="theme-switch-icon-moon" class="icons fa-moon">
-    <use xlink:href="#fa-moon" />
+  <svg id="theme-switch-icon-sun" class="icons fa-sun">
+    <use xlink:href="#fa-sun" />
   </svg>
 </div>
 
@@ -25,17 +25,17 @@
     checkbox.checked = checked
     const icon_sun = document.querySelector("#theme-switch-icon-sun");
     const icon_moon = document.querySelector("#theme-switch-icon-moon");
-    if (checked == true) {
-      document.body.classList.remove("theme-light");
-      document.body.classList.add("theme-dark");
-    } else {
+    if (checked) {
       document.body.classList.remove("theme-dark");
       document.body.classList.add("theme-light");
+    } else {
+      document.body.classList.remove("theme-light");
+      document.body.classList.add("theme-dark");
     }
   }
   checkbox.addEventListener("change", () => {
     switch_theme(checkbox.checked);
   });
   const is_dark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  switch_theme(is_dark);
+  switch_theme(!is_dark);
 </script>
