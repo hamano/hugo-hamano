@@ -5,8 +5,8 @@
 
 .share-button a {
   display: inline-block;
-  width: 54px;
-  height: 54px;
+  width: 4.5em;
+  height: 3em;
   padding: 4px 0;
   line-height: 18px;
   font-size: 16px;
@@ -18,6 +18,8 @@
   transition: all 0.4s;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 0.5em;
+  margin-right: 0.2em;
 }
 body.theme-dark .share-button a {
   color: $dark-base00;
@@ -32,8 +34,9 @@ body.theme-dark .share-button a {
   width: 1.6em;
   fill: currentColor;
 }
-.share-area .small-text {
-  font-size: 11px;
+.share-area .share-text {
+  display: block;
+  font-size: 0.8em;
 }
 .share-button .hatena-bookmark-button {
   background: #00A4DE;
