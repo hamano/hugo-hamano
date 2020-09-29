@@ -177,7 +177,7 @@ svg.icons {
   display: inline-block;
 }
 
-.profile {
+.profile-image {
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -185,6 +185,11 @@ svg.icons {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
+}
+
+.profile-link {
+  text-align: center;
+  margin-top: 1em;
 }
 
 em,strong {
