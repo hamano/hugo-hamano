@@ -27,10 +27,17 @@ body.theme-dark h6 {
   border-color: $dark-base06;
 }
 
+.content h1::before {
+  content: "# ";
+}
+
 h1 {
   font-size: x-large;
   font-weight: bold;
-  border-bottom: 0.1em solid;
+}
+
+.content h2::before {
+  content: "## ";
 }
 
 h2 {
@@ -40,14 +47,26 @@ h2 {
   border-left: 0.4em solid;
 }
 
+.content h3::before {
+  content: "### ";
+}
+
 h3 {
   font-size: large;
   font-weight: bold;
 }
 
+.content h4::before {
+  content: "#### ";
+}
+
 h4 {
   font-size: medium;
   font-weight: bold;
+}
+
+.title {
+  border-bottom: 0.1em solid;
 }
 
 .content {
