@@ -275,6 +275,10 @@ body.theme-dark .meta .tag {
 
 // for hugo toc
 
+.content .toc::before {
+  content: unset;
+}
+
 #TableOfContents {
   padding: 1em 0em 0em 1em;
   background: $light-base01;
