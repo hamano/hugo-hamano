@@ -264,12 +264,13 @@ ul {
   margin-right: 2em;
 }
 
-.meta span.tag {
-  border: 0.2rem solid $light-base06;
+.meta .tag {
+  border: 0.2rem solid $light-base04;
+  border-radius: 0.2em;
 }
 
-body.theme-dark .meta span.tag {
-  border: 0.2rem solid $dark-base06;
+body.theme-dark .meta .tag {
+  border: 0.2rem solid $dark-base04;
 }
 
 // for hugo toc
