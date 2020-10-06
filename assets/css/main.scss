@@ -27,7 +27,7 @@ body.theme-dark h6 {
   border-color: $dark-base06;
 }
 
-.content h1::before {
+.content > h1::before {
   content: "# ";
 }
 
@@ -36,7 +36,7 @@ h1 {
   font-weight: bold;
 }
 
-.content h2::before {
+.content > h2::before {
   content: "## ";
 }
 
@@ -47,7 +47,7 @@ h2 {
   border-left: 0.4em solid;
 }
 
-.content h3::before {
+.content > h3::before {
   content: "### ";
 }
 
@@ -56,7 +56,7 @@ h3 {
   font-weight: bold;
 }
 
-.content h4::before {
+.content > h4::before {
   content: "#### ";
 }
 
