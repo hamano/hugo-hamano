@@ -17,7 +17,11 @@
   {{ end -}}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   {{ if .IsPage -}}
+  {{ if isset .Params "twitter_card" -}}
+  <meta name="twitter:card" content="{{ .Params.twitter_card }}" />
+  {{ else -}}
   <meta name="twitter:card" content="summary" />
+  {{ end -}}
   <meta name="twitter:site" content="@hamano" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
