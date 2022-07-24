@@ -4,11 +4,18 @@
 {{ $Permalink = .Params.permalink -}}
 {{ end -}}
 
+{{ $title := "" -}}
+{{ if .IsNode -}}
+{{ $title = .Title -}}
+{{ else -}}
+{{ $title = printf "%s - %s" .Title .Parent.Title -}}
+{{ end -}}
+
 <section class="container">
 <div class="share-area">
   <div class="share-button">
     <!-- hatena bookmark -->
-    <a href="https://b.hatena.ne.jp/entry/{{$Permalink}}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{{$.Scratch.Get "title"}}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加">
+    <a href="https://b.hatena.ne.jp/entry/{{$Permalink}}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{{ $title }}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加">
       <svg><use xlink:href="#i-hatena"></use></svg>
       <span class="share-text">はてぶ</span>
     </a>
@@ -17,7 +24,7 @@
       <svg><use xlink:href="#fa-facebook"></use></svg><br/>
       <span class="share-text">Facebook</span></a>
     <!-- twitter -->
-    <a href="https://twitter.com/intent/tweet?text={{$.Scratch.Get "title"}} {{$Permalink}}" target="_blank" class="twitter-button">
+    <a href="https://twitter.com/intent/tweet?text={{ $title }} {{$Permalink}} via @hamano" target="_blank" class="twitter-button">
       <svg><use xlink:href="#fa-twitter"></use></svg><br/>
       <span class="share-text">Twitter</span>
     </a>
